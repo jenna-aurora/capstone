@@ -1,88 +1,76 @@
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meet the Justices</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/journal/bootstrap.min.css">
+
+    <title>Judicial Trends Interactive Dashboard: Search Supreme Court Justices</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/lux/bootstrap.min.css" 
 	 <link rel="stylesheet" href="css/hero.css">
 	 <link rel="stylesheet" href="css/card.css">
 	 <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-light border-bottom mb-4">
-	 <div class="container">
-	  <a class="navbar-brand fw-bold" href="#">Meet the Justices</a>
-	   <ul class="navbar-nav ms-auto">
-	     <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-		 <li class="nav-item"><a class="nav-link" href="#search">Search and Filters</a></li>
-		 <li class="nav-item"><a class="nav-link" href="#results">Results and Trends</a></li>
-		</ul>
-	   </div>
-	  </nav>
-    <main class="container"> 
-	<div class="card p-4 mb-4 shadow-sm">
-      <h1 class="display-4 mb-3">Meet the Justices</h1>
-	  <p class="lead">A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state president, and years of service.</p>
-	 </div>
-	 <section id="overview" class="mb-5">
-	 <h2 class="fw-bold">Overview</h2>
-	  <p class="card-text">This application allows users to explore information about Supreme Court justices, including the president who appointed them, their home state, and their years of service. Users can identify trends and compare appointments throughout Supreme Court history.</p>
-	 </section>
-	 <section id="search" class="mb-5">
-	 <h2 class="fw-bold">Search and Filters</h2>
-	<div class="input-group my-3">
-	 <input id="search-field" type="text" class="form-control" placeholder="Search Justice Name">
-	 <button id="search-btn" class="btn btn-primary" type="button">Search button</button>
-	</div>
-	<div class="mb-3">
-	  <label for="president-select" class="form-label fw-bold">President</label>
-	  <select id="president-select" class="form-select">
-		 <option value="">Select a President</option>
-		 <option value="Washington>George Washington</option>
-		 <option value="Jefferson">Thomas Jefferson</option>
-		 <option value="Lincoln">Abraham Lincoln</option>
-		 <option value="FDR">Franklin D. Roosevelt</option>
-		 <option value="Reagan">Ronald Reagan</option>
-		 <option value="Bush">George H. W. Bush</option>
-		 <option value="Clinton">Bill Clinton</option>
-		 <option value="Bush2">George W. Bush</option>
-	   	 <option value="Obama">Barack Obama</option>
-		 <option value="Trump">Donald Trump</option>
-		  </select>
-	</div>
-	<div class="mb-3">
-	  <label for="state-select" class="form-label fw-bold">State of Origin</label>
-	  <select id="state-select" class="form-select">
-		 <option value="">Select a State</option>
-		 <option value="AL">Alabama</option>
-		 <option value="CA">California</option>
-		 <option value="FL">Florida</option>
-		 <option value="IL">Illinois</option>
-		 <option value="LA">Louisiana</option>
-		 <option value="MA">Massachusetts</option>
-		 <option value="NY">New York</option>
-		 <option value="OH">Ohio</option>
-		 <option value="PA">Pennsylvania</option>
-		 <option value="TX">Texas</option>
-	   </select>
-	</div>
-	<div class="mb-3">
-      <label for="years-input" class="form-label fw-bold">Years of Service</label>
-      <input id="years-input" type="number" class="form-control" placeholder="e.g., 12">
-    </div>
-	  <p>Use the filters below to search for Supreme Court justices by president, state of origin, and years of service.</p>
-	  <p>A dropdown menu to select a president. A dropdown menu to select a state. A text box for years of service.</p>
-	 </section>
-	 <section id="results" class="mb-5">
-	 <h2 class="fw-bold">Results and Trends</h2>
-	 <button id="results-btn" class="btn btn-secondary mb-3" type="button">Results button</button>
-	  <p id="results-list"></p>
-	  <p>View matching justices and identify historical trends based on your selected filters.</p>
-	  <p>A button to display results.</p>
-	  </section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Search Supreme Court Justices</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+		 </ul>
+       </div>
+     </nav>
+    <main class="container">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <h1 class="display-5 fw-bold">Judicial Trends Interactive Dashboard</h1>
+        <p class="fs-4">
+		  A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state president, and years of service.
+        </p>
+      </div>
+      <section id="overview" class="mb-5">
+        <h2 class="fw-bold">Overview</h2>
+        <p>	Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Years of Service) Results & Trends.</p>
+      </section>
+      <section id="search" class="mb-5">
+		<h2 class="fw-bold">Search Justice name</h2>
+        <p>Name, President appointed By, Year Apointed, Political Party, State</p>
+		<div class="mb-3">
+		<input id="justice-name" type="text" class="form-control-3" placeholder="Type a justice's name">
+        <button id="justice-name-button" type="button" class="btn btn-primary">Search button</button>
+      </section>
+        <div class="mb-3">
+          <select id="president-select" class="form-select">
+            <option value="">Select a president</option>
+            <option value="Washington">George Washington</option>
+            <option value="Lincoln">Abraham Lincoln</option>
+            <option value="FDR">Franklin D. Roosevelt</option>
+            <option value="Reagan">Ronald Reagan</option>
+            <option value="Obama">Barack Obama</option>
+            <option value="Trump">Donald Trump</option>
+          </select>
+        </div>
+		<div class="mb-3">
+          <select id="state-select" class="form-select">
+            <option value="">Select a state</option>
+            <option value="NY">New York</option>
+            <option value="MA">Massachusetts</option>
+            <option value="VA">Virginia</option>
+            <option value="OH">Ohio</option>
+            <option value="GA">Georgia</option>
+          </select>
+        </div>
+		<div class="mb-3">
+          <input id="years-input" type="number" class="form-control" placeholder="Minimum years of service">
+        </div>
+		<button id="search-btn" type="button" class="btn btn-primary">Search</button>
+      </section>
+      <section id="results" class="mb-5">
+        <h2 class="fw-bold">Results and Trends</h2>
+        <p id="results-list"></p>
+      </section>
+
     </main>
-   <script src="script.js"></script>
+
   </body>
 </html>

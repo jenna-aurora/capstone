@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Judicial Trends Interactive Dashboard: Search Supreme Court Justices</title>
-	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/lux/bootstrap.min.css" 
-	 <link rel="stylesheet" href="css/hero.css">
-	 <link rel="stylesheet" href="css/card.css">
-	 <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
+
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Search Supreme Court Justices</a>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-          <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
-          <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
-		 </ul>
-       </div>
-     </nav>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+		 
+
+
+          <section id="links">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+              <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
+              <li class="nav-item"><a class="nav-link" href="page-2.html">Results</a></li>
+            </ul>
+          </section>
+        </div>
+      </nav>
+    </header>
+
     <main class="container">
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <h1 class="display-5 fw-bold">Judicial Trends Interactive Dashboard</h1>
         <p class="fs-4">
-		  A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state president, and years of service.
+          A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state, president, and years of service.
         </p>
       </div>
+
+      
       <section id="overview" class="mb-5">
         <h2 class="fw-bold">Overview</h2>
-        <p>	Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Years of Service) Results & Trends.</p>
+        <p>
+          Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Years of Service) Results & Trends.
+        </p>
       </section>
-      <section id="search" class="mb-5">
-		<h2 class="fw-bold">Search Justice name</h2>
-        <p>Name, President appointed By, Year Apointed, Political Party, State</p>
-		<div class="mb-3">
-		<input id="justice-name" type="text" class="form-control-3" placeholder="Type a justice's name">
-        <button id="justice-name-button" type="button" class="btn btn-primary">Search button</button>
-      </section>
+	  
+	  
+
+ <h2 class="fw-bold">Justice Search</h2>
+        <p>President</p>
+
+
+
+
+
         <div class="mb-3">
           <select id="president-select" class="form-select">
             <option value="">Select a president</option>
@@ -50,27 +62,14 @@
             <option value="Trump">Donald Trump</option>
           </select>
         </div>
-		<div class="mb-3">
-          <select id="state-select" class="form-select">
-            <option value="">Select a state</option>
-            <option value="NY">New York</option>
-            <option value="MA">Massachusetts</option>
-            <option value="VA">Virginia</option>
-            <option value="OH">Ohio</option>
-            <option value="GA">Georgia</option>
-          </select>
-        </div>
-		<div class="mb-3">
-          <input id="years-input" type="number" class="form-control" placeholder="Minimum years of service">
-        </div>
-		<button id="search-btn" type="button" class="btn btn-primary">Search</button>
-      </section>
-      <section id="results" class="mb-5">
-        <h2 class="fw-bold">Results and Trends</h2>
-        <p id="results-list"></p>
-      </section>
 
+
+<a  href="page-2.html"><span class="page2-link"></span>Search Supreme Court Justices</a>
+
+       
+      </section>
     </main>
 
+    <script src="script.js"></script>
   </body>
 </html>

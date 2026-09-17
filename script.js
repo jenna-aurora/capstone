@@ -1,27 +1,21 @@
-let searchField = document.getElementById("search-field");
-let searchButton = document.getElementById("search-btn");
-let resultsButton = document.getElementById("results-btn");
+﻿let searchField = document.getElementById("search-field");
+let justiceName = document.getElementById("justice-name");
+let justiceNameButton = document.getElementById("justice-name-button");
+let presidentSelect = document.getElementById("president-select").value;
 
+console.log("presidenSelect: ", presidentSelect);
 
 async function loadRecords() {
 	let response = await fetch(
-		"https://jenna-a-cardenas.workers.dev/api/v1/datasets/student-data-api.jenna-a-cardenas.workers.dev/records?search=" 
-		+ searchBox.value
-		);
+		"https://student-data-api.jenna-a-cardenas.workers.dev/api/v1/datasets" 
+		+ searchField.value
+	);
+
 	console.log("Status" + response.status);
 	
 	let data = await response.json();
-	let records = data.records;
+	records = data.records;
 	console.log("Records: " + records.length);
+	
+	buildTrends(records);
 }
-
-
-searchButton.addEventListener("click", function () {
-	document.getElementById("results-list").textContent = searchField.value;
-	loadRecords();
-});
-
-
-resultButton.addEventListener("click", function () {
-	document.getElementById("results-list").textContent = searchField.value;
-});

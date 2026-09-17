@@ -13,7 +13,8 @@ async function loadRecords() {
 
 	console.log("Status" + response.status);
 	
-	let data = await response.json();
+	let data = await response.json(); 
+	
 	let records = data.records;
 	console.log("Records: " + records.length);
 	
@@ -30,16 +31,14 @@ justiceNameButton.addEventListener("click", async function () {
 });
 
 function buildTrends(records) {
-	let text = "";
+	let recordsArray = [];
 	
-	text = text + "This search returned " + records.length + " justices. ";
 
-	let earliest = records[0]["Year Apointed"];
-	
 	
 	records.forEach(function (record) {
-		if (record["Year Appointed"] < earliest) {
-			earliest = record["Year Appointed"];
+		if (record["Nominated by"] == presidentSelect.value) {
+			recordsArray.push(record);
 		}
 	});
+	console.log("recordsArray: ", recordsArray);
 }

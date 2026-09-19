@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Judicial Trends Interactive Dashboard: Search Supreme Court Justices</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <section id="links">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="page-2.html">Results</a></li>
+        </ul>
+      </section>
+    </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <h1 class="display-5 fw-bold">Judicial Trends Interactive Dashboard</h1>
+      <p class="fs-4">
+        A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state, president, and years of service.
+      </p>
+    </div>
+
+
+
+    <section id="overview" class="mb-5">
+      <h2 class="fw-bold">Overview</h2>
+      <p>
+        Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Years of Service) Results & Trends.
+      </p>
+    </section>
+
+
+
+
+
+    <h2 class="fw-bold">Justice Search</h2>
+    <p>President</p>
+
+<!-- President Select Choice Menu -->
+    <div class="mb-3">
+      <select id="president-select" class="form-select">
+        <option value="">Select a president</option>
+        <option value="Washington">George Washington</option>
+        <option value="Lincoln">Abraham Lincoln</option>
+        <option value="FDR">Franklin D. Roosevelt</option>
+        <option value="Reagan">Ronald Reagan</option>
+        <option value="Richard Nixon">Richard Nixon</option>
+        <option value="Trump">Donald Trump</option>
+      </select>
+    </div>
+
+<!-- Result Display -->
+  <section id="results" class="mb-5">
+    <h2 class="fw-bold">Results and Trends</h2>
+    <div id="results-list"></div>
+  </section>
+
+
+
+  <section id="historical-trends" class="mb-5">
+    <h2 class="fw-bold">Historical Trends</h2>
+    <p id="trends">Information about trends</p>
+  </section>
+
+  <button id="justice-name-button">Search Supreme Court Justices</button>
+
+  </section>
+</main>
+
+  <script src="script.script.js"></script>
+</body>
+</html>

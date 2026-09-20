@@ -1,9 +1,16 @@
-﻿
+﻿console.log("Hello World");
 
 let justiceName = document.getElementById("justice-name");
 let justiceNameButton = document.getElementById("justice-name-button");
 let presidentSelect = document.getElementById("president-select");
 let resultsList = document.getElementById("results-list");
+
+let greeting = document.getElementById("greeting-1");
+greeting.textContent = now.getHours();
+let stamp = document.getElementById("stamp-1");
+stamp.textContent = now.toDateString();
+let now = new Date();
+
 
 
 

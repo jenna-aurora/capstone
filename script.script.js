@@ -2,9 +2,10 @@
 
 
 let justiceName = document.getElementById("justice-name");
-let justiceNameButton = document.getElementById("justice-name-button");
-/*let presidentSelect = document.getElementbyId("president-select");*/
+let recordsButton = document.getElementById("records-button");
+let presidentSelect = document.getElementById("president-select");
 let resultsList = document.getElementById("results-list");
+let stateSearchButton = document.getElementById("state-search-button");
 
 let index = 0
 let recordsArray = [];
@@ -16,12 +17,22 @@ async function loadRecords() {
 	let data = await response.json();
 	records = data.records;
 	console.log("Records: " + records.length);
+	
+	showRecord();
+}
+
+function showSong() {
+ let record = records[index];
+ 
+ document.getElementById("").textContent = record[""];
+ document.getElementById("").textContent = record.JusticeNumber + " - " + record.State;
+ document.getElementById("").textcontent = (index + 1) + " of " + records.length	
 }
 	
 function buildTrends() {
 	let record = recordsArray[index];
 }	
-	recordsArray.forEach(function (record) {
+	recordsArray.forEach(function (Nominatedby) {
 		if (record["Nominated by"] == presidentSelect.value) {
 			recordsArray.push(record);
 		}
@@ -32,11 +43,11 @@ function buildTrends() {
 		buildTrends(records);
 });
 
-justiceNameButton.addEventListener("click", function () {
+recordsButton.addEventListener("click", function () {
 	let record = loadRecords(presidentSelect.value);
 	
 	if (!record) return;
 	
 	resultsList.textContent = record.Name;
-	console.log("record: ", record,Name);
-});
+	console.log("record: ", record.Name);
+});0

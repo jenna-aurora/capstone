@@ -13,14 +13,11 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
 		
-
-
-
           <section id="links">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
               <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
-              <li class="nav-item"><a class="nav-link" href="results">Results</a></li>
+              <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
             </ul>
           </section>
         </div>
@@ -31,35 +28,23 @@
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <h1 class="display-5 fw-bold">Judicial Trends Interactive Dashboard</h1>
         <p class="fs-4">
-          A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state, president, and years of service.
+          A student needs to find trends in Supreme Court justice appointments because they want to understand how the Court has changed over time. My page will help them explore justices by state, president, and Tenure Length.
         </p>
       </div>
-
-
 
       <section id="overview" class="mb-5">
         <h2 class="fw-bold">Overview</h2>
         <p>
-          Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Years of Service) Results & Trends.
+          Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Tenure Length) Results & Trends.
         </p>
       </section>
 	
-	
-
- <h2 class="fw-bold">Justice Search</h2>
-        <p>President</p>
-
-
-
-
-
-
-
-
+ <h2 class="fw-bold">Records Search</h2>
+        <p>Here are 6 Presidents to choose from.</p>
 
         <div class="mb-3">
           <select id="president-select" class="form-select">
-            <option value="">Select a president</option>
+            <option value="">Select a President</option>
             <option value="Washington">George Washington</option>
             <option value="Lincoln">Abraham Lincoln</option>
             <option value="FDR">Franklin D. Roosevelt</option>
@@ -69,22 +54,51 @@
           </select>
         </div>
 
+	  <button id="Records-button">Search Records</button>
+	  
+ <!-- <h2 class="fw-bold">State Search</h2> 
+		<p>Here are 6 States to choose from.</p>
+		
+		<div class="mb-3">
+		  <select id="state-select" class="form-select">
+			<option value="">Select a State</option>
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+		  </select>
+		</div>
+
+	  <button id="state-search-button">Search State</button>
+ <h2 class="fw-bold"</h2>
+		<p>Here are 6 Tenure Length</p>															 
+		 <div>
+		  <select>
+			  <option value=""</option>
+			  <option value=""</option>
+			  <option value=""</option>
+			  <option value=""</option>
+			  <option value=""</option>
+			  <option value=""</option>
+		 </div>
+		</select>-->
+		  
+	  
       <section id="results" class="mb-5">
         <h2 class="fw-bold">Results and Trends</h2>
         <p id="results-list"></p>
       </section>
-
-
 
       <section id="historical-trends" class="mb-5">
         <h2 class="fw-bold">Historical Trends</h2>
         <p id="trends">Information about trends</p>
       </section>
 
-	  <button id="justice-name-button">Search Supreme Court Justices</button>
+	  <!-- <button id="justice-name-button">Search Supreme Court Justices</button> -->
 	  <p id="greeting-1" greeting.textContent=now.getHours();>The date goes here.</p>
 	  <p id="stamp-1" stamp.textContent=now.toDateString();></p>
-
 
       </section>
     </main>

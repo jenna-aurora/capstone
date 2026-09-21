@@ -21,7 +21,7 @@ async function loadRecords() {
 	showRecord();
 }
 
-function showSong() {
+function showRecord() {
  let record = records[index];
  
  document.getElementById("").textContent = record[""];
@@ -50,4 +50,4 @@ recordsButton.addEventListener("click", function () {
 	
 	resultsList.textContent = record.Name;
 	console.log("record: ", record.Name);
-});0
+});

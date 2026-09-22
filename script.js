@@ -1,71 +1,43 @@
 ﻿console.log("Hello World");
 
-
-let justiceName = document.getElementById("justice-name");
-let recordsButton = document.getElementById("records-button");
+let showFive = document.getElementById("show-five");
+let showTen = document.getElementById("show-ten");
+let showTwenty = document.getElementById("show-twenty");
 let presidentSelect = document.getElementById("presidentSelect");
 let resultsList = document.getElementById("results-list");
-let stateSearchButton = document.getElementById("state-search-button");
 
-let index = 0
-let recordsArray = [];
 
-console.log("President-select:" + presidentSelect.value)
-async function loadRecords() {
-	let response = await fetch("https://student-data-api.jenna-a-cardenas.workers.dev/api/v1/datasets/Supreme-Court-Justice/records?limit=100");
+
+showFive.addEventListener("click", function () {
+	document.getElementById("results-list").textContent = "5";
+});
+showTen.addEventListener("click", function () {
+	document.getelementByIdyId("results-list").textContent = "10";
+});
+showTwenty.addEventListener("click", function () {
+	document.getElementById("results-list").textContent = "20";
+});
+
+
+console.log("President-select:" + presidentSelect);
+async function loadRecords(howMany) {
+	let response = await fetch("https://student-data-api.jenna-a-cardenas.workers.dev/api/v1/datasets/Supreme-Court-Justice/records?limit=" + howMany);
 	console.log("Status" + response.status);
 	let data = await response.json();
-	
-	let datasetResponse = data[0];
-	console.log(datasetResponse[0].justice + ": years of service is " + datasetResponse[0].tenureLength + "." );
-	/*records = data.records;
-	console.log("Records: " + records.length);*/
-	
-	showRecord();
-}
-
-function showDataset() {
- let dataset = records[index];
- 
- document.getElementById("").textContent = dataset[""];
- document.getElementById("").textContent = dataset.JusticeNumber + " - " + dataset.State;
- document.getElementById("").textcontent = (index + 1) + " of " + records.length	
-}
-	
-function buildTrends() {
-	let dataset = recordsArray[index];
-}	
-	recordsArray.forEach(function (Nominatedby) {
-		if (dataset["Nominated by"] == presidentSelect.value) {
-			recordsArray.push(dataset);
-		}
+	let datasets = data.records;
+	console.log("Records: " + datasets.length);
+	}
+	showFive.addEventListener("click", function () {
+		loadRecords(5);
 	});
-	console.log("recordsArray: ", recordsArray);
-	recordsArray.forEach(function (dataset) {
-		
-		buildTrends(records);
-});
-
-function buildTrends(records) {
-	let recordsArray = [];
-	
-
-
-
-	records.forEach(function (dataset) {
-		
-		if (dataset["Nominated by"] == presidentSelect.value) {
-			recordsArray.push(datset);
-		}
+	showTen.addEventListener("click", function () {
+		loadRecords(10);
 	});
-	console.log("recordsArray: ", recordsArray);
-}
-
-recordsButton.addEventListener("click", async function () {
-	let dataset = await loadRecords(presidentSelect.value);
+	showTwenty.addEventListener("click", function () {
+		loadRecords(20);
+	});
 	
-	if (!dataset) return;
+	let data = datasets[0];
 	
-	resultsList.textContent = dataset.Name;
-	console.log("dataset: ", dataset.Name);
-});
+	document.getElementById("results-list").textContent = data.justice;
+	document.getelementById("results-detail").textcontent = data["Tenure Length"];

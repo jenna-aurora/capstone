@@ -15,22 +15,19 @@
 	
 	### Sections
 	Overview - A brief introduction explaining the purpose of the app and what the users can explore.
-	Search and Filters (President, State, Years of Service)
+	Search and Filters (Nominated By, State, Date Confirmed)
 	Results & Trends
 	
 	### User input
-	A dropdown menu to select a president.
-	A dropdown menu to select a state.
-	A text box for years of service.
-	A button to display results.
-	
+	A dropdown menu to select a filter.
+	Buttons to choose the amount of data to display.
+	A reset button in results and trends.
 	
 	### Outputs
-	Name
-	President appointed By
-	Year Apointed
-	Political Party
+	Nominated By
 	State
+	Date Confirmed
+
 
 	## Data
 	
@@ -40,11 +37,11 @@
 	
 	1,1.0,https://upload.wikimedia.org/wikipedia/commons/7/72/John_Jay_%28Gilbert_Stuart_portrait%29.jpg,John Jay,1745.0,NY,ChiefJustice,Inaugural,"September 26, 1789","5 years, 253 days",George Washington
 
-	1. Which president nominated the most Supreme Court justices?
+	1. Who nominated the first Supreme Court justice?
+
+	2. Which state produced the first Supreme Court justice?
 	
-	2. Which state has produced the most Supreme Court justices?
-	
-	3. Who served the longest tenure on the Supreme Court?
+	3. Which president was confirmed first?
 	
 	
 

@@ -47,5 +47,6 @@
 
 	## Team
 	
-	Accountability partner: TammyAlbinDevREADME.md…]()
+	Accountability partner: TammyAlbinDev
 
+		

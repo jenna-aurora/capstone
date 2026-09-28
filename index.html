@@ -3,16 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Judicial Trends Interactive Dashboard: Search Supreme Court Justices</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
-
   <body class="bg-light">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-		
+        <div class="container">		
           <section id="links">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
@@ -23,7 +20,6 @@
         </div>
       </nav>
     </header>
-
     <main class="container">
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <h1 class="display-5 fw-bold">Judicial Trends Interactive Dashboard</h1>
@@ -32,88 +28,38 @@
         </p>
       </div>
 
+
       <section id="overview" class="mb-5">
         <h2 class="fw-bold">Overview</h2>
-        <p>
-          Overview - A brief introduction explaining the purpose of the app and what the users can explore. Search and Filters (President, State, Tenure Length) Results & Trends.
-        </p>
-      </section>
-	
+        <p>The Judicial Trends Interactice Dashboard is a web application designed to analyze and explore historic patterns in Supreme Court Justice appointments. The platform is built to help users-specifically students-understand how the composition and characteristics of the Court have evolved over time.</p>
+      </section>	
+
+
 	  <section id="search">
 	    <h2 class="fw-bold">Dataset Search</h2>
-         <p></p>
-		<button id="show-five" type="button">5</button>
-		<button id="show-ten" type="button">10</button>
+		 <p>Choose a filter from the dropdown</p>
+		<select id="presidentSelect">
+		 <option value="filter">Choose from:</option>
+		 <option value="Nominated by">Nominated By</option>
+		 <option value="State">State</option>
+		 <option value="Date confirmed">Date Confirmed</option>
+		</select>		
+         <p>click a number and receive data.</p>
 		<button id="show-twenty" type="button">20</button>
+		<button id="show-fifty" type="button">50</button>
+		<button id="show-one-hundred" type="button">100</button>
 	  </section>
-		  
+
 	  
       <section id="results" class="mb-5">
-        <h2 class="fw-bold">Results and Trends</h2>
+        <h2 class="fw-bold">Results and Trends</h2>
         <p id="results-list"></p>
-		<p id="results-detail"></p>
+		<button id="resetButton">Reset</button>
       </section>
-
-      <section id="historical-trends" class="mb-5">
-        <h2 class="fw-bold">Historical Trends</h2>
-        <p id="trends">Information about trends</p>
-      </section>
-
-
-	  <p id="greeting-1" greeting.textContent=now.getHours();>The date goes here.</p>
-	  <p id="stamp-1" stamp.textContent=now.toDateString();></p>
-
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+		<p id="greeting-1"></p>
+	    <p id="stamp-1"></p>
+    </section>
+   </main>
+  <script src="script.js"></script>
+ </body>
 </html>
-
-
-
-
-
-
-    <!--<div class="mb-3">
-          <select id="presidentSelect" class="form-select">
-            <option value="">Select a President</option>
-            <option value="Washington">George Washington</option>
-            <option value="Lincoln">Abraham Lincoln</option>
-            <option value="FDR">Franklin D. Roosevelt</option>
-            <option value="Reagan">Ronald Reagan</option>
-            <option value="Richard Nixon">Richard Nixon</option>
-            <option value="Trump">Donald Trump</option>
-          </select>
-        </div> 
-
-	   <button id="records-button">Search Records</button> -->
-	  
- <!-- <h2 class="fw-bold">State Search</h2> 
-		<p>Here are 6 States to choose from.</p>
-		
-		<div class="mb-3">
-		  <select id="state-select" class="form-select">
-			<option value="">Select a State</option>
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-		  </select>
-		</div>
-
-	  <button id="state-search-button">Search State</button>
- <h2 class="fw-bold"</h2>
-		<p>Here are 6 Tenure Length</p>															 
-		 <div>
-		  <select>
-			  <option value=""</option>
-			  <option value=""</option>
-			  <option value=""</option>
-			  <option value=""</option>
-			  <option value=""</option>
-			  <option value=""</option>
-		 </div>
-		</select>-->

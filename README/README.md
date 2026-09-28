@@ -9,7 +9,7 @@
 
 	## The plan
 
-	![My wireframe](wireframe.png)
+	![My wireframe](README/wireframe.png)
 
 
 	
